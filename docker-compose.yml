@@ -49,7 +49,7 @@ services:
         
   psono-fileserver:
     container_name: psono-fileserver
-    image: 916600710645.dkr.ecr.us-west-2.amazonaws.com/vault-passbolt-production-psono-fileserver-server:latest
+    image: 916600710645.dkr.ecr.us-west-2.amazonaws.com/vault-passbolt-production-psono-file-server:latest
     restart: unless-stopped
     ports:
       - '10200:80'
