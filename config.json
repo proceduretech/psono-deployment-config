@@ -1,0 +1,13 @@
+{
+  "backend_servers": [{
+    "title": "Houseworks Secure",
+    "url": "https://vault.houseworksinc.co/server"
+  }],
+  "base_url": "https://vault.houseworksinc.co/",
+  "allow_custom_server": false,
+  "allow_registration": true,
+  "allow_lost_password": true,
+  "disable_download_bar": true,
+  "authentication_methods": ["AUTHKEY"],
+  "saml_provider": []
+}
