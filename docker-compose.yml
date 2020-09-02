@@ -31,7 +31,7 @@ services:
   
   psono-client:
     container_name: psono-client
-    image: psono/psono-client:latest
+    image: 916600710645.dkr.ecr.us-west-2.amazonaws.com/vault-passbolt-production-psono-client:latest
     restart: unless-stopped
     ports:
       - '10101:80'
@@ -40,7 +40,7 @@ services:
 
   psono-admin-client:
     container_name: psono-admin-client
-    image: psono/psono-admin-client:latest
+    image: 916600710645.dkr.ecr.us-west-2.amazonaws.com/vault-passbolt-production-psono-admin-client:latest
     restart: unless-stopped
     ports:
       - '10102:80'
@@ -49,7 +49,7 @@ services:
         
   psono-fileserver:
     container_name: psono-fileserver
-    image: psono/psono-fileserver:latest
+    image: 916600710645.dkr.ecr.us-west-2.amazonaws.com/vault-passbolt-production-psono-fileserver-server:latest
     restart: unless-stopped
     ports:
       - '10200:80'
