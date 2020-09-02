@@ -49,12 +49,11 @@ services:
         
   psono-fileserver:
     container_name: psono-fileserver
-    image: psono/psono-fileserver:latest 
+    image: 916600710645.dkr.ecr.us-west-2.amazonaws.com/vault-passbolt-production-psono-file-server:latest 
     restart: unless-stopped
     ports:
       - '10200:80'
     volumes:
-      - /opt/psono-shard:/opt/psono-shard
       - ./settings.file.yaml:/root/.psono_fileserver/settings.yaml
 
 volumes:
