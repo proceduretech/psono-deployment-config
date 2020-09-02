@@ -1,9 +1,9 @@
 {
   "backend_servers": [{
-    "title": "Houseworks Secure",
-    "url": "https://vault.houseworksinc.co/server"
+    "title": "Housemedicine Secure",
+    "url": "https://vault.housemedicine.com/server"
   }],
-  "base_url": "https://vault.houseworksinc.co/",
+  "base_url": "https://vault.housemedicine.com/",
   "allow_custom_server": false,
   "allow_registration": true,
   "allow_lost_password": true,
