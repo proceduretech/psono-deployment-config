@@ -29,32 +29,32 @@ services:
     volumes: 
       - ./settings.yaml:/root/.psono_server/settings.yaml
   
-  # psono-client:
-  #   container_name: psono-client
-  #   image: psono/psono-client:latest
-  #   restart: unless-stopped
-  #   ports:
-  #     - '10101:80'
-  #   volumes:
-  #     - ./config.json:/usr/share/nginx/html/config.json
+  psono-client:
+    container_name: psono-client
+    image: psono/psono-client:latest
+    restart: unless-stopped
+    ports:
+      - '10101:80'
+    volumes:
+      - ./config.json:/usr/share/nginx/html/config.json
 
-  # psono-admin-client:
-  #   container_name: psono-admin-client
-  #   image: psono/psono-admin-client:latest
-  #   restart: unless-stopped
-  #   ports:
-  #     - '10102:80'
-  #   volumes:
-  #     - ./config.json:/usr/share/nginx/html/portal/config.json
+  psono-admin-client:
+    container_name: psono-admin-client
+    image: psono/psono-admin-client:latest
+    restart: unless-stopped
+    ports:
+      - '10102:80'
+    volumes:
+      - ./config.json:/usr/share/nginx/html/portal/config.json
         
-  # psono-fileserver:
-  #   container_name: psono-fileserver
-  #   image: psono/psono-fileserver:latest
-  #   restart: unless-stopped
-  #   ports:
-  #     - '10200:80'
-  #   volumes:
-  #     - ./settings.file.yaml:/root/.psono_fileserver/settings.yaml
+  psono-fileserver:
+    container_name: psono-fileserver
+    image: psono/psono-fileserver:latest
+    restart: unless-stopped
+    ports:
+      - '10200:80'
+    volumes:
+      - ./settings.file.yaml:/root/.psono_fileserver/settings.yaml
 
 volumes:
   local_postgres_data:
