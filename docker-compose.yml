@@ -16,16 +16,18 @@ services:
     ports:
       - '5432:5432'
 
-  # psono-server:
-  #   container_name: psono-server
-  #   image: 916600710645.dkr.ecr.us-west-2.amazonaws.com/vault-passbolt-production-psono-server:latest
-  #   sysctls:
-  #     net.core.somaxconn: 65535
-  #   restart: unless-stopped
-  #   ports:
-  #     - '10100:80'
-  #   volumes: 
-  #     - ./settings.yaml:/root/.psono_server/settings.yaml
+  psono-server:
+    container_name: psono-server
+    image: 916600710645.dkr.ecr.us-west-2.amazonaws.com/vault-passbolt-production-psono-server:latest
+    sysctls:
+      net.core.somaxconn: 65535
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    ports:
+      - '10100:80'
+    volumes: 
+      - ./settings.yaml:/root/.psono_server/settings.yaml
   
   # psono-client:
   #   container_name: psono-client
